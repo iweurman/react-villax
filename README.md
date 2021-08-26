@@ -1,6 +1,6 @@
 # react-medialax [![NPM version][npm-image]][npm-url]
 
-### This repo is originally forked from react-paralax with added support to play video's
+This repo is originally forked from react-paralax with added support to play video's
 
 ## Install
 
@@ -8,11 +8,12 @@
 npm install
 ```
 
-### [Demo on codesandbox](https://codesandbox.io/embed/r0yEkozrw?view=preview)
+<!-- ### [Demo on codesandbox](https://codesandbox.io/embed/r0yEkozrw?view=preview) -->
 
 ## Usage examples
 
 ### Basic - background video
+
 ```javascript
 import { Parallax } from 'react-medialax';
 
