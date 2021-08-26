@@ -8,7 +8,7 @@ This repo is originally forked from [react-paralax](https://github.com/rrutsche/
 npm install
 ```
 
-<!-- ### [Demo on codesandbox](https://codesandbox.io/embed/r0yEkozrw?view=preview) -->
+### [Demo on codesandbox](https://codesandbox.io/embed/thirsty-matan-wrwss?view=preview)
 
 ## Usage examples
 
