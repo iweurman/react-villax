@@ -1,11 +1,11 @@
 {
-    "name": "react-medialax",
+    "name": "react-vilax",
     "author": "I. Weurman",
     "version": "1.0.1",
     "description": "Forked from react-parallax with added support to play video's",
     "repository": {
         "type": "git",
-        "url": "https://github.com/iweurman/react-medialax.git"
+        "url": "https://github.com/iweurman/react-vilax.git"
     },
     "main": "lib/index.js",
     "types": "@types/index.ts",
