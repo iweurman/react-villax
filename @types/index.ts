@@ -23,7 +23,7 @@ export type ParallaxProps = {
     bgVideoStyle?: { [key: string]: any };
     bgVideoType?: BgVideoTypeProp;
     autoPlay?: boolean;
-    controls?: boolean;
+    muted?: boolean;
     loop?: boolean;
     playsInline?: boolean;
     opacity?: number;

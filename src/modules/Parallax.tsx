@@ -71,7 +71,7 @@ class Parallax extends ParallaxClass {
     isDynamicBlur: boolean;
 
     static defaultProps = {
-        bgClassName: 'react-villax-bgimage',
+        bgClassName: 'react-parallax-bgimage',
         bgImageAlt: '',
         className: '',
         contentClassName: '',
@@ -465,9 +465,9 @@ class Parallax extends ParallaxClass {
             bgImageStyle,
             bgVideoStyle,
             bgVideoType,
+            muted,
             autoPlay,
             loop,
-            controls,
             playsInline,
         } = this.props;
         const {
@@ -483,7 +483,7 @@ class Parallax extends ParallaxClass {
         } = this.state;
         return (
             <div
-                className={`react-villax ${className}`}
+                className={`react-parallax ${className}`}
                 style={{ position: 'relative', overflow: 'hidden', ...style }}
                 ref={(node) => {
                     this.node = node;
@@ -504,10 +504,11 @@ class Parallax extends ParallaxClass {
                 ) : null}
                 {bgVideo ? (
                     <video
-                        autoPlay={autoPlay}
-                        loop={loop}
-                        controls={controls}
-                        playsInline={playsInline}
+                        muted={muted ?? true}
+                        autoPlay={autoPlay ?? true}
+                        loop={loop ?? true}
+                        controls={false}
+                        playsInline={playsInline ?? true}
                         controlsList="nodownload"
                         ref={(bg) => {
                             this.video = bg;
@@ -523,7 +524,7 @@ class Parallax extends ParallaxClass {
                 {renderLayer ? renderLayer(-(percentage - 1)) : null}
                 {splitChildren.bgChildren.length > 0 ? (
                     <div
-                        className="react-villax-background-children"
+                        className="react-parallax-background-children"
                         ref={(bg) => {
                             this.bg = bg;
                         }}
