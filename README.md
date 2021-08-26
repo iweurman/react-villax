@@ -1,4 +1,4 @@
-# react-medialax [![NPM version][npm-image]][npm-url]
+# react-villax [![NPM version][npm-image]][npm-url]
 
 This repo is originally forked from [react-paralax](https://github.com/rrutsche/react-parallax#readme) with added support to play video's
 
@@ -15,7 +15,7 @@ npm install
 ### Basic - background video
 
 ```javascript
-import { Parallax } from 'react-medialax';
+import { Parallax } from 'react-villax';
 
 const Container = () => (
     <Parallax blur={10} bgVideo="path/to/video.mp4" strength={200}>
