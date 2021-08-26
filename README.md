@@ -1,6 +1,6 @@
 # react-medialax [![NPM version][npm-image]][npm-url]
 
-This repo is originally forked from react-paralax with added support to play video's
+This repo is originally forked from [react-paralax](https://www.npmjs.com/package/react-parallax) with added support to play video's
 
 ## Install
 
