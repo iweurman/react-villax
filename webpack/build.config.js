@@ -9,7 +9,7 @@ module.exports = merge(common, {
     output: {
         path: path.resolve(__dirname, '../lib/'),
         filename: 'index.js',
-        library: 'react-parallax',
+        library: 'react-villax',
         libraryTarget: 'umd',
         umdNamedDefine: true,
         globalObject: `(typeof self !== 'undefined' ? self : this)`,

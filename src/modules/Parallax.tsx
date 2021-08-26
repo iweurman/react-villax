@@ -34,6 +34,9 @@ const initialStyle = {
 
 const initialVideoStyle = {
     ...initialStyle,
+    height: '100%',
+    width: '100%',
+    objectFit: 'cover',
 };
 
 class Parallax extends ParallaxClass {
@@ -68,7 +71,7 @@ class Parallax extends ParallaxClass {
     isDynamicBlur: boolean;
 
     static defaultProps = {
-        bgClassName: 'react-parallax-bgimage',
+        bgClassName: 'react-villax-bgimage',
         bgImageAlt: '',
         className: '',
         contentClassName: '',
@@ -254,14 +257,11 @@ class Parallax extends ParallaxClass {
     /**
      * sets position for the background video
      */
-    setVideoPosition(percentage: number, autoHeight = false): void {
+    setVideoPosition(percentage: number): void {
         const { disabled, strength, blur } = this.props;
-        const height = autoHeight ? 'auto' : `${this.getImageHeight()}px`;
-        const width = !autoHeight ? 'auto' : `${this.contentWidth}px`;
+        
         const videoStyle: StyleObjectType = {
             ...this.state.videoStyle,
-            height,
-            width,
         };
 
         if (!disabled) {
@@ -298,6 +298,18 @@ class Parallax extends ParallaxClass {
     }
 
     /**
+     * The video height depends on parallax direction. If strength value is negative we have to give it more height
+     * so there is no white space at start/end of container visiblility.
+     */
+    getVideoHeight(): number {
+        const { strength } = this.props;
+        const inverse = strength < 0;
+        const factor = inverse ? 2.5 : 1;
+        const strengthWithFactor = factor * Math.abs(strength);
+        return Math.floor(this.contentHeight + strengthWithFactor);
+    }
+
+    /**
      * updates scroll position of this component and also its width and height.
      * defines, if the background image should have autoHeight or autoWidth to
      * fit the component space optimally
@@ -322,7 +334,7 @@ class Parallax extends ParallaxClass {
         if (
             this.video &&
             this.video.videoWidth / this.video.videoHeight <
-                this.contentWidth / this.getImageHeight()
+                this.contentWidth / this.getVideoHeight()
         ) {
             autoHeight = true;
         }
@@ -337,17 +349,17 @@ class Parallax extends ParallaxClass {
         if (hasBgImage) {
             this.setImagePosition(percentage, autoHeight);
         }
-        // update bg image position if set
+        // update bg video position if set
         if (hasBgVideo) {
-            this.setVideoPosition(percentage, autoHeight);
+            this.setVideoPosition(percentage);
         }
         // update position of Background children if exist
         if (hasBgChildren) {
             this.setBackgroundPosition(percentage);
         }
 
-        // be sure to set the percentage if neither image nor bg component was set
-        if (!hasBgImage && !hasBgChildren) {
+        // be sure to set the percentage if neither image nor video nor bg component was set
+        if (!hasBgVideo && !hasBgImage && !hasBgChildren) {
             this.setState({ percentage });
         }
     };
@@ -471,7 +483,7 @@ class Parallax extends ParallaxClass {
         } = this.state;
         return (
             <div
-                className={`react-parallax ${className}`}
+                className={`react-villax ${className}`}
                 style={{ position: 'relative', overflow: 'hidden', ...style }}
                 ref={(node) => {
                     this.node = node;
@@ -511,7 +523,7 @@ class Parallax extends ParallaxClass {
                 {renderLayer ? renderLayer(-(percentage - 1)) : null}
                 {splitChildren.bgChildren.length > 0 ? (
                     <div
-                        className="react-parallax-background-children"
+                        className="react-villax-background-children"
                         ref={(bg) => {
                             this.bg = bg;
                         }}

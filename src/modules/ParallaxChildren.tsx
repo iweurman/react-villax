@@ -5,7 +5,7 @@ import { ParallaxChildrenProps } from '../../@types';
 const ParallaxChildren: React.FC<ParallaxChildrenProps> = ({ children, onMount, className }) => (
     <div
         ref={(node) => onMount(node)}
-        className={className || 'react-parallax-content'}
+        className={className || 'react-villax-content'}
         style={{ position: 'relative' }}
     >
         {children}
