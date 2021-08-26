@@ -1,7 +1,7 @@
 {
     "name": "react-medialax",
     "author": "I. Weurman",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Forked from react-parallax with added support to play video's",
     "repository": {
         "type": "git",
