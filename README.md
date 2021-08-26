@@ -1,6 +1,6 @@
-# react-villax [![NPM version][npm-image]][npm-url]
+# react-villax
 
-This repo is originally forked from [react-paralax](https://github.com/rrutsche/react-parallax#readme) with added support to play video's
+[react-paralax](https://github.com/rrutsche/react-parallax#readme) with background video support.
 
 ## Install
 
