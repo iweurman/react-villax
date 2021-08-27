@@ -7,7 +7,7 @@ This is originally forked from [react-parallax](https://github.com/rrutsche/reac
 ## Install
 
 ```sh
-npm install
+npm i react-villax
 ```
 
 ### [Demo on codesandbox](https://codesandbox.io/embed/thirsty-matan-wrwss?view=preview)
