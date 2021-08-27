@@ -1,6 +1,8 @@
 # react-villax
 
-[react-paralax](https://github.com/rrutsche/react-parallax#readme) with background video support.
+React Parallax with background video support.
+
+This is originally forked from [react-parallax](https://github.com/rrutsche/react-parallax#readme).
 
 ## Install
 
