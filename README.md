@@ -31,7 +31,6 @@ const Container = () => (
 -   muted - boolean - default = true
 -   autoPlay - boolean - default = true
 -   loop - boolean - default = true
--   opacity - number from 1 to 0 - optional
 
 ### Example
 
