@@ -1,7 +1,7 @@
 {
     "name": "react-villax",
     "author": "I. Weurman",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Forked from react-parallax with added support to play video's",
     "repository": {
         "type": "git",
