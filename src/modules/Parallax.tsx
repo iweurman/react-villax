@@ -259,7 +259,7 @@ class Parallax extends ParallaxClass {
      */
     setVideoPosition(percentage: number): void {
         const { disabled, strength, blur } = this.props;
-        
+
         const videoStyle: StyleObjectType = {
             ...this.state.videoStyle,
         };
@@ -468,7 +468,6 @@ class Parallax extends ParallaxClass {
             muted,
             autoPlay,
             loop,
-            playsInline,
         } = this.props;
         const {
             bgVideo,
@@ -508,7 +507,7 @@ class Parallax extends ParallaxClass {
                         autoPlay={autoPlay ?? true}
                         loop={loop ?? true}
                         controls={false}
-                        playsInline={playsInline ?? true}
+                        playsInline
                         controlsList="nodownload"
                         ref={(bg) => {
                             this.video = bg;

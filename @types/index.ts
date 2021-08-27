@@ -25,7 +25,6 @@ export type ParallaxProps = {
     autoPlay?: boolean;
     muted?: boolean;
     loop?: boolean;
-    playsInline?: boolean;
     opacity?: number;
     onLoad?: (event: Event) => void;
     bgStyle?: { [key: string]: any };
