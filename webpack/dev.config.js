@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const common = require('./base.config.js');
 
 module.exports = merge(common, {
-    entry: ['react-hot-loader/patch', path.resolve(__dirname, '../src/kitchensink/index.tsx')],
+    entry: ['react-hot-loader/patch', path.resolve(__dirname, '../src/demo/index.tsx')],
     output: {
         path: path.resolve(__dirname, 'www'),
         filename: 'bundle.js',
@@ -22,7 +22,7 @@ module.exports = merge(common, {
     stats: 'minimal',
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/kitchensink/index.html',
+            template: './src/demo/index.html',
             inject: 'body',
         }),
     ],
