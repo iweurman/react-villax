@@ -359,7 +359,7 @@ class Parallax extends ParallaxClass {
         }
 
         // be sure to set the percentage if neither image nor video nor bg component was set
-        if (!hasBgVideo && !hasBgImage && !hasBgChildren) {
+        if (!hasBgImage && !hasBgChildren) {
             this.setState({ percentage });
         }
     };
